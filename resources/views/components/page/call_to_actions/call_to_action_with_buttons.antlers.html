@@ -1,0 +1,14 @@
+<section class="py-8 relative block {{ section_colour }} " id="callToAction">
+    <div class="container mx-auto px-10">
+        <div class="flex flex-wrap justify-center">
+            <div class="w-full lg:w-10/12  text-center" id="ctaContent">
+                {{ cta_content }}
+            </div>
+        </div>
+        <div class="gap-4 flex md:flex-row flex-wrap justify-around items-center" id="ctaButtons">
+            {{ buttons }}
+                {{ partial:components.page.button }}
+            {{ /buttons }}
+        </div>
+    </div>
+</section>

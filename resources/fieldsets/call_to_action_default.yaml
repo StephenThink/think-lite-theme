@@ -1,0 +1,41 @@
+title: 'Call To Action'
+fields:
+  -
+    import: section_detail
+  -
+    handle: cta_content
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - removeformat
+        - anchor
+        - color
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: 'CTA Content'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      instructions: 'This is the text that you want to display to the visitor.'

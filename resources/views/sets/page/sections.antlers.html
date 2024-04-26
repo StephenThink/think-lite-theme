@@ -1,0 +1,9 @@
+<section class="relative block {{ section_colour }} {{ top_padding }} {{ bottom_padding }}">
+    <div class="container mx-auto px-4" id="sectionComponent">
+        {{ if sections }}
+            {{ sections }} {{ partial src="sets/sections/{type}" }} {{ /sections }}
+        {{ /if }}
+    </div>
+</section>
+
+

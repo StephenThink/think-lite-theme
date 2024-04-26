@@ -1,0 +1,61 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              placeholder: 'Name ...'
+              input_type: text
+              antlers: false
+              display: Name
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              validate:
+                - required
+          -
+            handle: e-mail
+            field:
+              placeholder: 'E-mail ...'
+              input_type: email
+              antlers: false
+              display: E-mail
+              type: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              validate:
+                - required
+          -
+            handle: telephone
+            field:
+              input_type: tel
+              character_limit: 11
+              antlers: false
+              type: text
+              display: Telephone
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              replicator_preview: true
+              placeholder: '07*** ******'
+          -
+            handle: message
+            field:
+              placeholder: 'What would you like to ask us?'
+              antlers: false
+              display: Message
+              type: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              validate:
+                - required

@@ -1,0 +1,627 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Everybody Loves Cookies'
+        instructions: "You have to switch both theses on for theses to work, if you do not switch on the Google Analytics then there will only be a **'dismiss'** button on the cookie dialog."
+        fields:
+          -
+            handle: show_cookie_dialog
+            field:
+              default: false
+              type: toggle
+              display: 'Show Cookie Dialog'
+              instructions: 'This will display the cookie box until you accept or reject the cookies.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 50
+          -
+            handle: test_mode
+            field:
+              options:
+                'true': 'Test Mode'
+                'false': 'Live Mode'
+              inline: true
+              cast_booleans: false
+              default: 'false'
+              type: radio
+              display: 'Test Mode'
+              instructions: 'If in test mode, then nothing gets saved to storage.'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: message
+            field:
+              buttons:
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+                - color
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: Message
+              instructions: 'This is the message show when the cookie box is open.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: cookie_accept_button_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Accept Button Text'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              always_save: true
+          -
+            handle: cookie_reject_button_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Reject Button Text'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              always_save: true
+          -
+            handle: accept_message
+            field:
+              buttons:
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+                - color
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Accept Message'
+              instructions: 'This is the message show when the cookie is accepted.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+          -
+            handle: reject_message
+            field:
+              buttons:
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+                - color
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Reject Message'
+              instructions: 'This is the message show when the cookie is rejected.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+      -
+        display: 'Google Analytics'
+        instructions: 'Please fill these in before activating the Google Analytics'
+        fields:
+          -
+            handle: analytics_active
+            field:
+              options:
+                'true': 'On'
+                'false': 'Off'
+              default: 'false'
+              type: button_group
+              display: 'Analytics Active'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              instructions: 'Has this been made active on google?'
+          -
+            handle: google_analytics
+            field:
+              mode: keyed
+              keys:
+                local: Local
+                staging: Staging
+                production: Production
+              display: 'Google Analytics'
+              type: array
+              instructions: 'This contains all the information for Google Analytics, please make sure that they contain valid Google Analytics Tags.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              hide_display: false
+  icons:
+    display: 'Icons and Site Images'
+    sections:
+      -
+        display: Webpage
+        instructions: 'These show in the top left of the Browser.'
+        fields:
+          -
+            handle: by32
+            field:
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: By32
+              type: assets
+              instructions: 'This should be a picture 32 x 32'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              folder: site/icons
+              show_set_alt: true
+              hide_display: false
+              replicator_preview: true
+          -
+            handle: by192
+            field:
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: By192
+              type: assets
+              instructions: 'This should be a image 192 x 192'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              folder: site/icons
+          -
+            handle: for_apple_devices
+            field:
+              display: 'For Apple Devices'
+              type: section
+              instructions: 'These are for Apple Devices'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: apple_touch
+            field:
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'Apple Touch'
+              type: assets
+              instructions: 'This will display on an apple device, when stored on the home screen, should only be a PNG file'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              validate:
+                - image
+              folder: site/icons
+      -
+        display: 'Error Pages'
+        instructions: 'These will display on the error pages'
+        fields:
+          -
+            handle: error404
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              folder: site/error
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: error404
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: error500
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              folder: site/error
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: error500
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  footer:
+    display: Footer
+    sections:
+      -
+        display: 'Left Side'
+        fields:
+          -
+            handle: footer_heading
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Footer Heading'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: footer_content
+            field:
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - color
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Footer Content'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Right Side'
+        fields:
+          -
+            handle: footer_menus
+            field:
+              collapse: false
+              previews: true
+              max_sets: 2
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    menu_column:
+                      display: 'Menu Column'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: menu_title
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Menu Title'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: navs_field
+                          field:
+                            max_items: 1
+                            mode: default
+                            type: navs
+                            display: 'Navs Field'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'Footer Menus'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Bottom
+        fields:
+          -
+            handle: site_by
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Site By'
+              instructions: 'What would you like to be displayed before the Company Name?'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: company_link
+            field:
+              display: 'Company Link'
+              type: link
+              instructions: 'External Link to the Companies Website'
+              listable: true
+              instructions_position: above
+              visibility: visible
+              always_save: true
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: copyright_year
+            field:
+              input_type: number
+              antlers: false
+              type: text
+              display: 'Copyright Year'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              instructions: 'allows for a number to be put in, if there isnt a number in it then it will not show on the bottom of the page'
+  themes:
+    display: Themes
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: display_theme_content
+            field:
+              options:
+                text: Text
+                icons: Icons
+                'off': 'Off'
+              default: 'off'
+              type: button_group
+              display: 'Display Theme Content'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              instructions: 'When switched off the default theme is the light mode.'
+          -
+            handle: theme_changer
+            field:
+              options:
+                'true': 'Yes'
+                'false': 'No'
+              inline: true
+              cast_booleans: false
+              default: 'false'
+              type: radio
+              display: 'Theme Changer'
+              instructions: 'Do you want Dark mode?'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Theme
+        instructions: 'Pick a theme'
+        fields:
+          -
+            handle: theme_selection
+            field:
+              options:
+                theme1: 'Theme 1 - Gray and Pink'
+                theme2: 'Theme 2 - Nothing'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: theme1.css
+              type: select
+              display: 'Theme Selection'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  page:
+    display: Page
+    sections:
+      -
+        display: 'Page Transitions'
+        instructions: 'Would you like any page transitions?'
+        fields:
+          -
+            handle: transition_effect
+            field:
+              options:
+                none: 'No'
+                curtains: Curtains
+                opacity: Opacity
+                slide: Slide
+                zoom: Zoom
+                rotation: Rotation
+                overlay: Overlay
+                blinds: Blinds
+              taggable: false
+              push_tags: false
+              multiple: false
+              max_items: 1
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: 'no'
+              type: select
+              display: 'Transition Effect'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  search:
+    display: Search
+    sections:
+      -
+        display: Search
+        fields:
+          -
+            handle: search_active
+            field:
+              default: false
+              type: toggle
+              display: 'Search Active'
+              instructions: 'Is there a search feature for this website?'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: search_placeholder
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Search Placeholder'
+              instructions: 'What do you want your search question for the visitor?'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: search_no_results
+            field:
+              input_type: text
+              default: 'Unfortunately, nothing has been found for'
+              antlers: false
+              type: text
+              display: 'Search No Results'
+              instructions: 'What would you like to say if nothing was found.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Page Content'
+        instructions: 'What appears on the Search Page'
+        fields:
+          -
+            import: page_content
+            prefix: search_

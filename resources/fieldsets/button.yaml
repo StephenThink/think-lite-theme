@@ -1,0 +1,64 @@
+title: Button
+fields:
+  -
+    handle: button_label
+    field:
+      input_type: text
+      default: 'Click me'
+      antlers: false
+      type: text
+      display: 'Button Label'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      instructions: 'This is what is shown to the visitor.'
+      validate:
+        - required
+  -
+    handle: button_link
+    field:
+      type: link
+      display: 'Button Link'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+      width: 50
+      instructions: 'Where does the button take you to?'
+  -
+    handle: button_style
+    field:
+      options:
+        button-primary: Primary
+        button-secondary: Secondary
+        button-tertiary: Tertiary
+      default: button-primary
+      type: button_group
+      display: 'Button Style'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      instructions: 'How do you want the Button to look?'
+  -
+    handle: button_description
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Button Description'
+      instructions: 'This is for accessibility purposes to help people who use screen readers.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required

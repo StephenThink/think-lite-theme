@@ -1,0 +1,33 @@
+<header>
+    <nav
+        class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-gray-900 dark:bg-black"
+        id="mainNav"
+        x-data="navBar"
+        x-init="init"
+        @click.away="closeNav()"
+        @keydown.escape.window="closeNav()"
+    >
+      <div
+          class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+          id="navLinks"
+      >
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <a href="/"
+             class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+             aria-label="This will take you to the homepage."
+          >
+              {{ client:name }}
+          </a>
+
+            <div class="lg:hidden flex items-center">
+                {{ partial:components.admin.theme.buttons }}
+            </div>
+
+            {{ partial:components.navigation.hamburger }}
+
+        </div>
+          {{ partial:components.navigation.desktop }}
+          {{ partial:components.navigation.mobile }}
+      </div>
+    </nav>
+</header>

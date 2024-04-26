@@ -1,0 +1,17 @@
+tree:
+  -
+    id: beabb71e-6655-4fd2-987e-41490dbc4715
+    title: 'MIT License'
+    url: 'https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md'
+  -
+    id: 52d0ac5a-bc43-44d6-a421-fe716e8c1df5
+    title: 'Terms & Conditions'
+    url: 'https://creative-tim.com/terms'
+  -
+    id: 951d5245-6a2b-4b5d-9b39-7a27c0df58bc
+    title: 'Privacy Policy'
+    url: 'https://creative-tim.com/privacy'
+  -
+    id: 8db9820f-0dbd-4b36-85f9-c6db13c360fe
+    title: 'Contact Us'
+    url: 'https://creative-tim.com/contact-us'

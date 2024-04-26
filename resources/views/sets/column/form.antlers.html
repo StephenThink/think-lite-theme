@@ -1,0 +1,16 @@
+<div class="flex flex-wrap justify-center mt-24">
+    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+        <div class="flex-auto p-5 lg:p-10">
+          <h4 class="text-2xl font-semibold">{{ form_title }}</h4>
+          <div class="leading-relaxed mt-1 mb-4 text-gray-600">{{form_content}}</div>
+          <div class="mt-8">
+              {{ type_of_form }}
+                  {{ partial src="sets/forms/form" }}
+              {{ /type_of_form }}
+          </div>
+        </div>
+    </div>
+</div>
+
+
+

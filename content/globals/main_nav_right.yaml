@@ -1,0 +1,25 @@
+title: 'Main Nav Right'
+data:
+  display_what: both
+  menu_items:
+    -
+      id: ltzxroyh
+      item_icon: alert
+      item_text: Facebook
+      item_link: 'https://google.com'
+      type: menu_item
+      enabled: true
+    -
+      id: ltzxs258
+      item_icon: dark-mode
+      item_text: Yahoo
+      item_link: 'https://yahoo.com'
+      type: menu_item
+      enabled: false
+    -
+      id: ltzxsfnj
+      item_icon: image-file
+      item_text: GIT
+      item_link: 'https://github.com'
+      type: menu_item
+      enabled: false

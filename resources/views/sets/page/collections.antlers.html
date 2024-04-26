@@ -1,0 +1,21 @@
+<section class="relative block {{ section_colour }} {{ top_padding }} {{ bottom_padding }}">
+    <div class="container mx-auto px-4 ">
+            {{ collection :from="which_collection" paginate="8" as="posts" }}
+
+                {{ if no_results }}
+                    {{ partial:components.collection.no_results }}
+
+                {{ /if }}
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4" id="collectionSection">
+                    {{ posts }}
+                        {{ partial:blog/card }}
+                    {{ /posts }}
+                </div>
+
+                {{ if count > 8 }}
+                    {{ partial:components.collection.pagination }}
+                {{ /if }}
+            {{ /collection }}
+    </div>
+</section>

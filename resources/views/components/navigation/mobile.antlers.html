@@ -1,0 +1,54 @@
+<div id="mobileNav" class="fixed right-0 left-0 z-100 min-h-[93vh] overflow-hidden bg-gray-900 dark:bg-black top-14 lg:hidden"
+     x-show="isNavBarOpen" x-cloak
+     x-transition:enter="transition ease-out duration-100 origin-top"
+     x-transition:enter-start="opacity-0 transform scale-y-50 -translate-y-5 "
+     x-transition:enter-end="opacity-100 transform scale-y-100 translate-y-0"
+     x-transition:leave="transition ease-in duration-75 origin-top"
+     x-transition:leave-start="opacity-100 transform scale-y-100 translate-y-0"
+     x-transition:leave-end="opacity-0 transform scale-y-50 -translate-y-5"
+     role="navigation"
+     aria-label="Mobile Navigation"
+>
+
+<div
+    class="flex flex-col justify-between items-center bg-transparent shadow-none container "
+>
+      <!-- Mobile navigation list -->
+      <ul class="flex flex-col list-none w-full h-[80dvh] overflow-y-auto ">
+          {{ nav:main_nav include_home="false" }}
+              {{ if children }}
+                  <!-- Dropdown menu -->
+                  <div
+{{#                       x-data="dropdown" #}}
+                  >
+                      {{ partial:components.navigation.mobile.parent_link }}
+
+                      <!-- Dropdown menu items -->
+                      {{ partial:components.navigation.mobile.children }}
+
+                  </div>
+              {{ else }}
+                  <!-- Regular menu item -->
+                        {{ partial:components.navigation.mobile.top_link }}
+              {{ /if }}
+          {{ /nav:main_nav }}
+      </ul>
+
+    <!-- Bottom fixed navigation -->
+<div class="fixed bottom-0 w-full bg-gray-900 z-main-nav border-t-2 border-white">
+
+    {{ main_nav_right }}
+    {{ if menu_items|count > 0 }}
+        <div class="container">
+        <ul class="flex list-none  w-full justify-between flex-wrap">
+            {{ menu_items }}
+                <!-- Individual menu item -->
+                {{ partial:components.navigation.mobile.extra_link }}
+            {{ /menu_items }}
+            </ul>
+    </div>
+    {{ /if }}
+    {{ /main_nav_right }}
+</div>
+        </div>
+</div>

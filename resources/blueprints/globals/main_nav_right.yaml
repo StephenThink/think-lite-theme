@@ -1,0 +1,79 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: display_what
+            field:
+              options:
+                icon: Icon
+                text: Text
+                both: Both
+              type: button_group
+              display: 'Display what'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              default: text
+          -
+            handle: menu_items
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                right_nav_buttons:
+                  display: 'Right Nav Buttons'
+                  instructions: null
+                  icon: null
+                  sets:
+                    menu_item:
+                      display: 'Menu Item'
+                      instructions: null
+                      icon: setting-menu-horizontal-dots
+                      fields:
+                        -
+                          handle: item_icon
+                          field:
+                            type: icon
+                            display: 'Item Icon'
+                            width: 25
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: item_text
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Item Text'
+                            width: 75
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: item_link
+                          field:
+                            type: link
+                            display: 'Item Link'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'Menu Items'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

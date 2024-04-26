@@ -1,0 +1,15 @@
+<div class="flex flex-wrap mt-12 justify-center">
+    {{stacks}}
+        <div class="w-full lg:w-3/12 px-4 text-center" id="stackBox">
+            <div class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                {{ stack_icon }}
+            </div>
+            <h6 class="{{ title_colour }}" id="stackBoxTitle">
+                {{ stack_title }}
+            </h6>
+            <div class="{{content_colour}}" id="stackBoxContent">
+                {{stack_content}}
+            </div>
+        </div>
+    {{/stacks}}
+</div>

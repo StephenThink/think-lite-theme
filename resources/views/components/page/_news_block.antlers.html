@@ -1,0 +1,12 @@
+<section class="relative block {{ section_colour }} {{ top_padding }} {{ bottom_padding }}">
+    <div class="container mx-auto px-4 ">
+        <div class="w-full lg:w-9/12 px-4 mx-auto text-center pb-12">
+            <h3 id="blog_sub_heading">{{heading}}</h3>
+        </div>
+        <div class="flex flex-wrap justify-center">
+            {{ news_entries }}
+            {{ partial:blog/card otherWidthSize="lg:w-4/12 lg:mt-0 mt-6 px-4" }}
+            {{ /news_entries }}
+        </div>
+    </div>
+</section>

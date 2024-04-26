@@ -1,0 +1,95 @@
+title: 'Team Member'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: team_position
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Team Position'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: team_image
+            field:
+              max_files: 1
+              mode: list
+              container: team_members
+              folder: /
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Team Image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  social:
+    display: Social
+    sections:
+      -
+        display: 'Lets be Social'
+        instructions: "Please fill in the corrsponding social links, these will in turn link to the icons in the **'/assets/site/social-icons'**.  To use this on a page use the following ```{{ partial:partials/socials }}```"
+        fields:
+          -
+            handle: social_links
+            field:
+              mode: keyed
+              keys:
+                telephone: Telephone
+                email: Email
+                facebook: Facebook
+                Instagram: Instagram
+                pinterest: Pinterest
+                snapchat: Snapchat
+                telegram: Telegram
+                tiktok: Tiktok
+                twitch: Twitch
+                twitter: Twitter
+                whatsapp: Whatsapp
+                youtube: Youtube
+                zoom: Zoom
+              display: 'Social Links'
+              type: array
+              icon: array
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              instructions: "This will use the corresponding icon files located in **'/assets/site/social-icons'**. To change an icon, simply replace the corresponding SVG file in the **'social-icons'** folder."
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true

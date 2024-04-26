@@ -1,0 +1,30 @@
+<div class="flex {{ if content_layout==='contentRight' }} flex-row-reverse {{ /if }} flex-wrap items-center mt-32">
+    <div class="w-full md:w-5/12 px-4 mr-auto ml-auto page-content-split">
+      <div class="{{icon_colour}} p-4 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full">
+          {{ content_icon }}
+      </div>
+        {{ content }}
+    </div>
+    <div class="w-full md:w-4/12 px-4 mr-auto ml-auto pt-6 md:pt-0">
+        {{ if image_type==='landscape' }}
+            {{#  Landscape Image #}}
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-600" id="landscapeImageContainer">
+                <img
+                    src="{{ glide:landscape_image preset="landscape_image" }}"
+                    class="w-full align-middle rounded-t-lg"
+                    alt="{{ landscape_image:alt }}"
+                />
+                <blockquote class="relative p-8 mb-4 " id="landscapeImageText">
+
+                    {{ image_text }}
+                </blockquote>
+            </div>
+        {{ else }}
+            <img
+                alt="{{ portrait_image:alt }}"
+                class="w-full max-w-full rounded-lg shadow-lg "
+                src="{{ glide:portrait_image preset='portrait_image'}}"
+            />
+        {{ /if }}
+    </div>
+</div>

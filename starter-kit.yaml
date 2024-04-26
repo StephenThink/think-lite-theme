@@ -1,0 +1,23 @@
+export_paths:
+  - app/Logging
+  - app/Widgets
+  - config/filesystems.php
+  - config/logging.php
+  - config/statamic/api.php
+  - config/statamic/assets.php
+  - config/statamic/bard-color-picker.php
+  - config/statamic/cp.php
+  - config/statamic/editions.php
+  - config/statamic/search.php
+  - content
+  - resources
+  - routes/web.php
+  - package.json
+  - postcss.config.js
+  - README.md
+  - tailwind.config.js
+  - vite.config.js
+  - .gitignore
+dependencies:
+  ndx/statamic-bard-color-picker: ^1.2
+  teamnovu/statamic-images-missing-alt: ^1.0

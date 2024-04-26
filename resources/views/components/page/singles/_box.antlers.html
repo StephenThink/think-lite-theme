@@ -1,0 +1,12 @@
+<div class="w-full lg:w-3/12 p-4 text-center {{ individual_box_colour ?? box_colour }} rounded-xl" id="box">
+    {{ if box_icon }}
+        <div class="{{ individual_icon_colour ?? icon_colour }} p-3 w-12 h-12 shadow-lg rounded-full inline-flex items-center justify-center" id="boxIcon">
+            {{ box_icon }}
+        </div>
+    {{ /if }}
+
+    <h6 class="{{ individual_title_colour ?? title_colour }}" id="boxTitle">{{ box_title }}</h6>
+    <div class="{{ individual_content_colour ?? content_colour}}" id="boxContent">
+        {{box_content | widont}}
+    </div>
+</div>

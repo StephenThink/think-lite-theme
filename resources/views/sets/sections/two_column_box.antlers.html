@@ -1,0 +1,13 @@
+<div class="flex flex-wrap items-center mt-32 justify-center md:space-x-5" id="columnTwoComponent">
+    <div class="w-full md:w-5/12 flex flex-col {{ left_column_content_alignment }} " id="columnLeft">
+        {{ left_column }}
+            {{ partial src="sets/column/{type}" }}
+        {{ /left_column }}
+    </div>
+
+    <div class="w-full md:w-5/12 pt-6 md:pt-0 flex flex-col {{ right_column_content_alignment }}" id="columnRight">
+        {{ right_column }}
+            {{ partial src="sets/column/{type}" }}
+        {{ /right_column }}
+    </div>
+</div>

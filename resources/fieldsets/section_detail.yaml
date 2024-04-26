@@ -1,0 +1,61 @@
+title: 'Section'
+fields:
+  -
+    handle: section_colour
+    field:
+      options:
+        bg-black: Black
+        bg-white: White
+        bg-gray-300: 'Light Gray'
+        bg-gray-900: 'Dark Gray'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: bg-white
+      type: select
+      display: 'Section Colour'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      instructions: 'This will set the colour of the Section that all the following components will sit in front of'
+  -
+    handle: top_padding
+    field:
+      options:
+        padding-top-none: None
+        padding-top-small: Small
+        padding-top-medium: Medium
+        padding-top-large: Large
+        padding-top-xlarge: XLarge
+      default: padding-top-medium
+      type: button_group
+      display: 'Top Padding'
+      instructions: 'Would you like a gap at the top of the section?'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: bottom_padding
+    field:
+      options:
+        padding-bottom-none: None
+        padding-bottom-small: Small
+        padding-bottom-medium: Medium
+        padding-bottom-large: Large
+        padding-bottom-xlarge: XLarge
+      default: padding-bottom-xlarge
+      type: button_group
+      display: 'Bottom Padding'
+      instructions: 'Would you like a gap at the bottom of the section?'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

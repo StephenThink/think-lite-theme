@@ -1,0 +1,77 @@
+title: 'Site Admin'
+data:
+  show_cookie_dialog: true
+  test_mode: 'false'
+  message:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'We use cookies to measure the range of this website so we can easily see how many visitors are on our pages. This helps us a lot to further improve our services and adapt it more to your needs.'
+  cookie_accept_button_text: Accept
+  cookie_reject_button_text: Reject
+  accept_message:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Thank you for your support...'
+  reject_message:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Well, we have to deal with your decision...'
+  analytics_active: 'true'
+  google_analytics:
+    local: G-FWTWQSHLTN
+    staging: stagega11
+    production: prodga11
+  by32: site/icons/32x32.jpg
+  by192: site/icons/192x192.jpg
+  apple_touch: site/icons/180x180.jpg
+  error404: site/error/error.png
+  error500: site/error/error.png
+  footer_heading: "Let's keep in touch!"
+  footer_content:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Find us on any of these platforms, we respond 1-2 business days.'
+  footer_menus:
+    -
+      id: lvc9w63b
+      menu_title: 'Useful Links'
+      navs_field: main_nav
+      type: menu_column
+      enabled: true
+    -
+      id: lvc9wf67
+      menu_title: 'Other Resources'
+      navs_field: other_resource
+      type: menu_column
+      enabled: true
+  site_by: 'Site By Think!Creative'
+  company_link: 'https://thinkcreative.uk'
+  copyright_year: 2024
+  display_theme_content: text
+  theme_changer: 'true'
+  theme_selection: theme1
+  transition_effect: overlay
+  search_active: true
+  search_placeholder: 'What are you looking for...'
+  search_no_results: 'Unfortunately, nothing has been found for'
+  search_page_content:
+    -
+      type: set
+      attrs:
+        id: lvf206fk
+        values:
+          type: hero_with_image
+          heading: 'Search Results'
+          hero_image: search.jpeg

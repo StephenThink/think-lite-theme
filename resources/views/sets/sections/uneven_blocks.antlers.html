@@ -1,0 +1,19 @@
+<div class="container mx-auto px-4 pb-20 -mt-36" id="unevenStackSection">
+    <div class="flex flex-wrap justify-center ">
+        {{ stacks }}
+        <div class=" {{ stack_location }} w-full md:w-4/12 2xl:max-w-[25%] px-4 text-center ">
+            <div class="relative flex flex-col min-w-0 break-words  w-full mb-8 shadow-lg rounded-lg" id="unevenStackBox">
+                <div class="px-4 py-5 flex-auto">
+                    {{  if stack_icon }}
+                        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400" id="unEvenStackBoxIcon">
+                            {{ stack_icon }}
+                        </div>
+                    {{ /if }}
+              <h6 class="{{ title_colour }}" id="unEvenStackBoxTitle">{{stack_title}}</h6>
+              <div class="{{ content_colour }}" id="unEvenStackBoxContent">{{stack_content}}</div>
+            </div>
+          </div>
+        </div>
+        {{ /stacks }}
+    </div>
+</div>

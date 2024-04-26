@@ -1,0 +1,9 @@
+{
+    "name": "stephenthink/think-lite-theme",
+    "extra": {
+        "statamic": {
+            "name": "Think Lite Theme",
+            "description": "Think Lite Theme starter kit"
+        }
+    }
+}

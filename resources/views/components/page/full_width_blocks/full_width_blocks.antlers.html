@@ -1,0 +1,17 @@
+<div class="mt-12 flex flex-wrap justify-center">
+    {{boxes}}
+        <div class="w-full lg:w-9/12 px-10 py-6 text-center border shadow-lg mb-16 rounded-xl {{ individual_box_colour ?? box_colour }}" id="fullWidthBox">
+            {{ if box_icon }}
+                <div class="{{ individual_icon_colour ?? icon_colour }} p-3 w-12 h-12 shadow-lg rounded-full  inline-flex items-center justify-center" id="fullWidthBoxIcon">
+                    {{ box_icon }}
+                </div>
+            {{ /if }}
+            <h6 class="{{ individual_title_colour ?? title_colour }}" id="fullWidthBoxTitle">
+                {{ box_title }}
+            </h6>
+            <div class="{{ individual_content_colour ?? content_colour}}" id="fullWidthBoxContent">
+                {{box_content | widont}}
+            </div>
+        </div>
+    {{/boxes}}
+</div>

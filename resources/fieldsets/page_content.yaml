@@ -1,0 +1,241 @@
+title: 'Page Content'
+fields:
+  -
+    handle: page_content
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - color
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: true
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: trim
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      sets:
+        page:
+          display: Page
+          instructions: null
+          icon: align-object-top
+          sets:
+            hero_with_image:
+              display: Hero
+              instructions: 'This will display an image with text'
+              icon: presentation-board
+              fields:
+                -
+                  handle: heading
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Heading
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This will be displayed in the center of the hero image.'
+                -
+                  handle: sub_heading
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                      - color
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Sub Heading'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This will display below the heading of the hero.'
+                -
+                  handle: hero_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: hero
+                    folder: /
+                    restrict: true
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Hero Image'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This will sit behind the heading and sub-heading.'
+            sections:
+              display: Section
+              instructions: 'This will enable you to populate the page with different options.'
+              icon: layout-split-horizontal
+              fields:
+                -
+                  import: section_detail
+                -
+                  import: section_creation
+            news:
+              display: News
+              instructions: 'Do you want to show people the latest news?'
+              icon: media-news-paper
+              fields:
+                -
+                  import: section_detail
+                -
+                  handle: heading
+                  field:
+                    input_type: text
+                    default: 'Recent News'
+                    antlers: false
+                    type: text
+                    display: Heading
+                    instructions: 'What do you want it to say above the recent news items?'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: news_entries
+                  field:
+                    max_items: 3
+                    mode: default
+                    create: true
+                    collections:
+                      - blog
+                    type: entries
+                    display: 'News Entries'
+                    instructions: 'Please select the latest news you want to display to visitors.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            collections:
+              display: Collections
+              instructions: 'This will display items from a Collection'
+              icon: search-magnifying-glass
+              fields:
+                -
+                  import: section_detail
+                -
+                  handle: which_collection
+                  field:
+                    max_items: 1
+                    mode: default
+                    type: collections
+                    display: 'Which Collection'
+                    instructions: 'Pick the collection you would like to display'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+        call_to_actions:
+          display: 'Call To Actions'
+          instructions: 'This is the text that you want to display to the visitor.'
+          icon: alert-warning-exclamation-mark
+          sets:
+            call_to_action:
+              display: 'Call To Action'
+              instructions: 'This is the text that you want to display to the visitor.'
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  import: call_to_action_default
+            call_to_action_with_buttons:
+              display: 'Call To Action with Buttons'
+              instructions: 'This is the text that you want to display to the visitor.'
+              icon: alert-warning-exclamation-mark
+              fields:
+                -
+                  import: call_to_action_default
+                -
+                  handle: buttons
+                  field:
+                    collapse: false
+                    previews: true
+                    max_sets: 4
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          button:
+                            display: Button
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: button
+                    type: replicator
+                    display: Buttons
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: 'Page Content'
+      instructions: 'This is what populates the page, if you want to add predefined **sets** then click on the **Plus** to add them.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

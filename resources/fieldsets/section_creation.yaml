@@ -1,0 +1,1380 @@
+title: 'Section Creation'
+fields:
+  -
+    handle: sections
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: trim
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      sets:
+        block:
+          display: Block
+          instructions: null
+          icon: null
+          sets:
+            sub_heading:
+              display: 'Sub Heading'
+              instructions: 'Heading breaker down the page.'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: sub_heading_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Sub Heading Title'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: sub_heading_content
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - color
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Sub Heading Content'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: sub_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: text-black
+                    type: select
+                    display: 'Sub Colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: sub_content_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-gray-600: 'Dark Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: text-black
+                    type: select
+                    display: 'Sub Content Colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            full_width_box:
+              display: 'Full Width Box'
+              instructions: 'This is a box that goes across the entire width of the page.'
+              icon: text-formatting-text-box-1
+              fields:
+                -
+                  handle: boxes
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      box:
+                        display: Box
+                        instructions: null
+                        icon: null
+                        sets:
+                          box:
+                            display: Box
+                            instructions: 'This will represent a box for you to populate.'
+                            icon: alert-help-question
+                            fields:
+                              -
+                                handle: box_icon
+                                field:
+                                  type: icon
+                                  display: 'Box Icon'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: box_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Title
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: box_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - image
+                                    - table
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: Content
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: custom_options
+                                field:
+                                  mode: button
+                                  input_label: Advanced
+                                  type: revealer
+                                  display: 'Custom Options'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: individual_icon_colour
+                                field:
+                                  options:
+                                    'bg-white text-black': 'White Background, Black Icon'
+                                    'bg-white text-gray-300': 'White Background, Light Grey Icon'
+                                    'bg-white text-gray-600': 'White Background, Dark Grey Icon'
+                                    'bg-black text-white': 'Black Background, White Icon'
+                                    'bg-black text-gray-300': 'Black Background, Light Grey Icon'
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Icon colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Icon in the current blocks.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                              -
+                                handle: individual_title_colour
+                                field:
+                                  options:
+                                    text-white: White
+                                    text-gray-500: 'Mid Grey'
+                                    text-black: Black
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Title colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Title in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                              -
+                                handle: individual_content_colour
+                                field:
+                                  options:
+                                    text-white: White
+                                    text-gray-500: 'Mid Grey'
+                                    text-gray-600: 'Dark Grey'
+                                    text-black: Black
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Content colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Content in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                              -
+                                handle: individual_box_colour
+                                field:
+                                  options:
+                                    bg-white: White
+                                    'bg-gray-500 border-gray-300': 'Mid Grey'
+                                    bg-gray-600: 'Dark Grey'
+                                    bg-black: Black
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Box colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Box in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                    type: replicator
+                    display: Box
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: icon_colour
+                  field:
+                    options:
+                      'bg-white text-black': 'White Background, Black Icon'
+                      'bg-white text-gray-300': 'White Background, Light Grey Icon'
+                      'bg-white text-gray-600': 'White Background, Dark Grey Icon'
+                      'bg-black text-white': 'Black Background, White Icon'
+                      'bg-black text-gray-300': 'Black Background, Light Grey Icon'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Icon colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all icon colours in the current blocks.'
+                    max_items: 1
+                    default: 'bg-white text-gray-300'
+                -
+                  handle: title_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Title colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all Titles in the current blocks.'
+                    max_items: 1
+                    default: text-black
+                -
+                  handle: content_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-gray-600: 'Dark Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Content colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all Content in the current blocks.'
+                    max_items: 1
+                    default: text-black
+                -
+                  handle: box_colour
+                  field:
+                    options:
+                      bg-white: White
+                      bg-gray-500: 'Mid Grey'
+                      bg-gray-600: 'Dark Grey'
+                      bg-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Box colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all background colour in the current blocks.'
+                    max_items: 1
+                    default: bg-gray-600
+            quotation:
+              display: Quotation
+              instructions: 'You can add a Quote'
+              icon: text-formatting-quotation
+              fields:
+                -
+                  handle: quotation
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Quotation
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'What is your quote?'
+                -
+                  handle: quote_text_colour
+                  field:
+                    options:
+                      text-black: Black
+                      text-white: White
+                      text-gray-300: 'Light Grey'
+                      text-gray-600: 'Mid Grey'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: text-gray-600
+                    type: select
+                    display: 'Quote Text Colour'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 50
+                    instructions: 'What would you like the Quote text to be?'
+                -
+                  handle: quote_icon_colour
+                  field:
+                    options:
+                      text-black: Black
+                      text-white: White
+                      text-gray-300: 'Light Grey'
+                      text-gray-600: 'Mid Grey'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: text-gray-600
+                    type: select
+                    display: 'Quote Icon Colour'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 50
+                    instructions: 'What would you like the Quote icon to be?'
+            form:
+              display: Form
+              instructions: 'You can display a form.'
+              icon: form-drop-down-menu
+              fields:
+                -
+                  handle: form_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Form Title'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: form_content
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - color
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Form Content'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: type_of_form
+                  field:
+                    max_items: 1
+                    mode: default
+                    type: form
+                    display: 'Type of form'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: submit_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Submit Text'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: success_message
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Success Message'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            team_list:
+              display: 'Team List'
+              instructions: 'You can display the Team members.'
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  handle: team_entries
+                  field:
+                    max_items: 6
+                    mode: default
+                    create: true
+                    collections:
+                      - team_members
+                    type: entries
+                    display: 'Team Entries'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: name_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Name colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: position_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-gray-600: 'Dark Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Position colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+        media:
+          display: Media
+          instructions: Images/Videos
+          icon: media-image-picture-gallery
+          sets:
+            image:
+              display: Image
+              instructions: 'You can place a full width image.'
+              icon: media-image-camera
+              fields:
+                -
+                  handle: full_image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    mode: list
+                    container: full_images
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Full Image'
+                    instructions: 'This will me an image that is a full width image.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: additional_options
+                  field:
+                    mode: button
+                    type: revealer
+                    display: 'Additional Options'
+                    instructions: 'More options to show how the image appears.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    input_label: Options
+                -
+                  handle: image_width
+                  field:
+                    options:
+                      w-full: 'Full width'
+                      'w-full md:w-[75%]': 75%
+                      'w-full md:w-[80%]': 80%
+                      'w-full md:w-[90%]': 90%
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: true
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Image Width'
+                    instructions: 'Would you like a Square Image or add a rounded effect to the image?'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      additional_options: 'equals true'
+                    always_save: true
+                -
+                  handle: rounded_border
+                  field:
+                    options:
+                      rounded-none: Square
+                      rounded-md: Medium
+                      rounded-lg: Large
+                      rounded-xl: X-Large
+                      rounded-2xl: 2X-Large
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: true
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Rounded Border'
+                    instructions: 'Would you like a Square Image or add a rounded effect to the image?'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      additional_options: 'equals true'
+                    always_save: true
+            video:
+              display: Video
+              instructions: 'The ability to add a video to the section.'
+              icon: media-webcam-video
+              fields:
+                -
+                  import: video
+            gallery:
+              display: Gallery
+              instructions: 'The images will flow next to each other and on top of each other.'
+              icon: dashboard-layout-3
+              fields:
+                -
+                  handle: mortar
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          brick:
+                            display: Brick
+                            instructions: 'Please fill this information to place items in the gallery.'
+                            icon: media-image-photo-focus-frame
+                            fields:
+                              -
+                                handle: brick_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Brick Title'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: brick
+                                field:
+                                  max_files: 1
+                                  min_files: 1
+                                  mode: list
+                                  container: gallery
+                                  folder: /
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Brick
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  validate:
+                                    - required
+                              -
+                                handle: brick_content
+                                field:
+                                  antlers: false
+                                  type: textarea
+                                  display: 'Brick Content'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: brick_link
+                                field:
+                                  type: link
+                                  display: 'Brick Link'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Mortar
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+        column_blocks:
+          display: 'Column Blocks'
+          instructions: null
+          icon: layout-split-verical
+          sets:
+            two_column_box:
+              display: 'Two Column Box'
+              instructions: 'You can have a split of components in a left and right hand column.'
+              icon: layout-two-columns
+              fields:
+                -
+                  import: column
+                  prefix: left_
+                -
+                  import: column
+                  prefix: right_
+            uneven_blocks:
+              display: 'Uneven Blocks'
+              instructions: 'This is similiar to the stacked boxes with more options'
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: stacks
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          stack:
+                            display: Stack
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: stack_icon
+                                field:
+                                  type: icon
+                                  display: 'Stack Icon'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: stack_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Stack Title'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: stack_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - table
+                                    - color
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: 'Stack Content'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: stack_location
+                                field:
+                                  options:
+                                    uneven-block-top: Top
+                                    uneven-block-center: Center
+                                    uneven-block-bottom: Bottom
+                                  type: button_group
+                                  display: 'Stack Location'
+                                  instructions: 'Where do you want the box to appear on the page?'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Stacks
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_sets: 3
+                -
+                  handle: title_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Title colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: content_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-gray-600: 'Dark Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Content colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            three_stack_boxes:
+              display: 'Three Stack Boxes'
+              instructions: 'This will have 3 boxes in a columns so that you can display information in small boxes.'
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: icon_colour
+                  field:
+                    options:
+                      'bg-white text-black': 'White Background, Black Icon'
+                      'bg-white text-gray-300': 'White Background, Light Grey Icon'
+                      'bg-white text-gray-600': 'White Background, Dark Grey Icon'
+                      'bg-black text-white': 'Black Background, White Icon'
+                      'bg-black text-gray-300': 'Black Background, Light Grey Icon'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Icon colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all icon colours in the current blocks.'
+                    max_items: 1
+                    default: 'bg-white text-gray-300'
+                -
+                  handle: title_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-black: Black
+                      text-box-title-primary: 'Primary Theme'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Title colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all Titles in the current blocks.'
+                    max_items: 1
+                    default: text-black
+                -
+                  handle: content_colour
+                  field:
+                    options:
+                      text-white: White
+                      text-gray-500: 'Mid Grey'
+                      text-gray-600: 'Dark Grey'
+                      text-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Content colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all Content in the current blocks.'
+                    max_items: 1
+                    default: text-black
+                -
+                  handle: box_colour
+                  field:
+                    options:
+                      bg-transparent: None
+                      bg-white: White
+                      bg-gray-500: 'Mid Grey'
+                      bg-gray-600: 'Dark Grey'
+                      bg-black: Black
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Box colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of all background colour in the current blocks.'
+                    max_items: 1
+                    default: bg-gray-600
+                -
+                  handle: boxes
+                  field:
+                    collapse: false
+                    previews: true
+                    max_sets: 3
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: Box
+                        instructions: null
+                        icon: null
+                        sets:
+                          box:
+                            display: Box
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: box_icon
+                                field:
+                                  type: icon
+                                  display: 'Box Icon'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'Leave blank if you dont want an icon.'
+                              -
+                                handle: box_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Box Title'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: box_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - image
+                                    - table
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: 'Box Content'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: custom_options
+                                field:
+                                  mode: button
+                                  input_label: Advanced
+                                  type: revealer
+                                  display: 'Custom Options'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: individual_icon_colour
+                                field:
+                                  options:
+                                    'bg-white text-black': 'White Background, Black Icon'
+                                    'bg-white text-gray-300': 'White Background, Light Grey Icon'
+                                    'bg-white text-gray-600': 'White Background, Dark Grey Icon'
+                                    'bg-black text-white': 'Black Background, White Icon'
+                                    'bg-black text-gray-300': 'Black Background, Light Grey Icon'
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Icon colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Icon in the current blocks.'
+                                  max_items: 1
+                                  always_save: true
+                                  if:
+                                    custom_options: 'equals true'
+                                    box_icon: 'not null'
+                              -
+                                handle: individual_title_colour
+                                field:
+                                  options:
+                                    text-white: White
+                                    text-gray-500: 'Mid Grey'
+                                    text-black: Black
+                                    text-box-title-primary: 'Primary Theme'
+                                    text-box-title-secondary: 'Secondary Theme'
+                                    text-box-title-tertiary: 'Tertiary Theme'
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Title colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Title in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                              -
+                                handle: individual_content_colour
+                                field:
+                                  options:
+                                    text-white: White
+                                    text-gray-500: 'Mid Grey'
+                                    text-gray-600: 'Dark Grey'
+                                    text-black: Black
+                                    text-box-content-primary: 'Primary Theme'
+                                    text-box-content-secondary: 'Secondary Theme'
+                                    text-box-content-tertiary: 'Tertiary Theme'
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Content colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Content in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                              -
+                                handle: individual_box_colour
+                                field:
+                                  options:
+                                    bg-transparent: None
+                                    bg-white: White
+                                    'bg-gray-500 border-gray-300': 'Mid Grey'
+                                    bg-gray-600: 'Dark Grey'
+                                    bg-black: Black
+                                    bg-box-background-primary: 'Primary Theme'
+                                    bg-box-background-secondary: 'Secondary Theme'
+                                    bg-box-background-tertiary: 'Tertiary Theme'
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: true
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Box colour'
+                                  width: 50
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  instructions: 'This is the colour of the current Box in the current block.'
+                                  max_items: 1
+                                  if:
+                                    custom_options: 'equals true'
+                                  always_save: true
+                    type: replicator
+                    display: Boxes
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Sections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

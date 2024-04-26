@@ -1,0 +1,36 @@
+<div class="w-full {{ otherWidthSize }}  text-center  " id="card">
+<div class="flex flex-col rounded-xl bg-gray-600/10 transition ease-in-out h-[500px] group duration-[400ms] hover:scale-105">
+    <a href="{{ url }}" class="relative overflow-hidden rounded-t-xl">
+        <img
+            srcset="
+        {{ glide:thumbnail preset='portrait-image-4k-webp'  }} 2560w,         {{# Generate the 4k image (2560px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-4xl-webp' }} 1920w,         {{# Generate the 4xl image (1920px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-3xl-webp'  }} 1750w,        {{# Generate the 3xl image (1750px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-2xl-webp'  }} 1360w,         {{# Generate the 2xl image (1360px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-xl-webp'  }} 1140w,        {{# Generate the xl image (1140px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-lg-webp'  }} 980w,        {{# Generate the lg image (980px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-md-webp'  }} 740w,        {{# Generate the md image (740px wide) #}}
+                {{ glide:thumbnail preset='portrait-image-sm-webp'  }} 360w
+    "
+            class="h-60 w-full scale-110 object-cover transition ease-in-out duration-[400ms] group-hover:scale-100"
+            src="{{ glide:thumbnail preset="portrait-image-4k-webp" }}"
+            alt="{{ thumbnail.alt }}"
+            width="{{ thumbnail.width }}"
+            height="{{ thumbnail.height }}"
+        >
+        <div class="absolute inset-0 z-20 h-60 w-full bg-gradient-to-br from-green-800 to-red-500 object-cover opacity-0 mix-blend-overlay transition ease-in-out duration-[400ms] group-hover:opacity-75"></div>
+    </a>
+    <div class="px-3 py-4 text-sm flex flex-col flex-1 justify-between">
+        <div>
+        <h3 class="text-xl font-bold text-secondary">
+            <a href="{{ url }}" aria-label="{{ title }}">{{ title }}</a>
+        </h3>
+            <p class="text-lg text-secondary pt-2">{{ content }}</p>
+            </div>
+        <div class="flex items-center justify-center">
+        <p>{{ date }}</p>
+        </div>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,18 @@
+/* This is all you. */
+
+.widget_thinkcreative {
+    @apply rounded-t-md overflow-hidden
+    }
+
+.widget_thinkcreative > .header {
+    background: #808080;
+    }
+
+.widget_thinkcreative img {
+    height : 3rem;
+    }
+
+.white-label-logo {
+    width: 10rem;
+
+    }

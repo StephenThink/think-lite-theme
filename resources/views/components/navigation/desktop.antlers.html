@@ -1,0 +1,54 @@
+<div
+    class="lg:flex flex-grow items-center bg-transparent shadow-none hidden "
+>
+          <ul class="flex flex-col lg:flex-row list-none mr-auto divide-x-0 lg:divide-x-2 divide-gray-200">
+              {{ nav:main_nav include_home="false" }}
+                  {{ if children }}
+                      <div x-data="dropdown"
+                           @click="toggle()"
+                           @mouseenter="open"
+                           @mouseleave="close"
+                           class="text-white hover:text-gray-300 px-3 py-2 items-center text-xs uppercase font-bold inline-flex gap-2">
+                          <div class="relative">
+                              <!-- Parent to the Children Links -->
+                              {{ title }}
+                              <div x-cloak x-show="state"
+                                   class="absolute -left-2 top-0 pt-10 bg-transparent text-white shadow-md min-w-[150px] w-fit-content"
+                                   x-transition:enter="transition ease-out duration-100 origin-top"
+                                   x-transition:enter-start="opacity-0 transform scale-y-50 -translate-y-5"
+                                   x-transition:enter-end="opacity-100 transform scale-y-100 translate-y-0"
+                                   x-transition:leave="transition ease-in duration-75 origin-top"
+                                   x-transition:leave-start="opacity-100 transform scale-y-100 translate-y-0"
+                                   x-transition:leave-end="opacity-0 transform scale-y-50 -translate-y-5"
+                                   role="menu"
+                                   aria-hidden="{{ ! state }}"
+                              >
+                                  <ul class="flex flex-col bg-gray-900">
+                                      {{ children }}
+                                        {{ partial:components.navigation.desktop.children_list }}
+                                      {{ /children }}
+                                  </ul>
+                              </div>
+                          </div>
+                          {{ svg src="down.svg" }}
+                      </div>
+                  {{ else }}
+                      {{ partial:components.navigation.desktop.top_link }}
+                  {{ /if }}
+              {{ /nav:main_nav }}
+          </ul>
+
+
+    {{ main_nav_right }}
+    {{ if menu_items|count > 0 }}
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto border-t-2 border-gray-900 lg:border-t-0">
+            {{ menu_items }}
+                {{ partial:components.navigation.desktop.extra_link }}
+            {{ /menu_items }}
+            </ul>
+    {{ /if }}
+    {{ /main_nav_right }}
+    {{ partial:components.admin.theme.buttons }}
+    {{ partial:components.navigation.desktop.searchbar }}
+
+        </div>

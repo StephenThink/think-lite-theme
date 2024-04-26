@@ -1,0 +1,10 @@
+{{ if sub_heading_title || sub_heading_content }}
+<div class="flex flex-wrap justify-center text-center mb-24" id="subHeading">
+    <div class="w-full lg:w-9/12 px-4">
+        <h2 class=" {{ sub_colour }}" id="subHeadingTitle">{{ sub_heading_title }}</h2>
+        <div class=" {{ sub_content_colour }}" id="subHeadingContent">
+            {{ sub_heading_content }}
+        </div>
+    </div>
+</div>
+{{ /if }}

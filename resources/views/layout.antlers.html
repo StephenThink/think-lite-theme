@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}"
+{{ partial:components.admin.theme.html_code }}
+
+
+>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{#          Disables Robots from crawling if its not in production #}}
+        {{ if environment != 'production' }}
+            <meta name="robots" content="noindex">
+        {{ /if }}
+
+        <link rel="icon" href="{{ site_admin:by32 }}" sizes="32x32">
+        <link rel="icon" href="{{ site_admin:by192 }}" sizes="192x192">
+        <link rel="apple-touch-icon" href="{{ site_admin:apple_touch }}">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        {{ vite src="resources/css/{site_admin:theme_selection}.css" }}
+        {{ stack:styles }}
+    </head>
+    <body class="text-gray-800 antialiased font-sans {{ if environment != 'production' }}debug-screens{{ /if }}"
+          data-barba="wrapper"
+          data-barba-animate="{{ site_admin:transition_effect }}">
+        {{ partial:components.navigation.mainNav }}
+    <div data-barba="container" data-barba-namespace="home">
+          <main >
+            {{ template_content }}
+          </main>
+    {{ partial:components.footer.footer }}
+</div>
+
+
+
+
+        {{ stack:scripts }}
+    </body>
+
+</html>
