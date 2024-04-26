@@ -10,6 +10,9 @@ export_paths:
   - config/statamic/editions.php
   - config/statamic/search.php
   - content
+  - public/assets
+  - public/think
+  - public/.htaccess
   - resources
   - routes/web.php
   - package.json
