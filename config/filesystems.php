@@ -145,6 +145,30 @@ return [
             'throw' => false,
         ],
 
+        'mixed-image' => [
+            'driver' => 'local',
+            'root' => public_path('assets') . '/content/images/mixed',
+            'url' => '/assets/content/images/mixed',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'map-image' => [
+            'driver' => 'local',
+            'root' => public_path('assets') . '/content/images/maps',
+            'url' => '/assets/content/images/maps',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'reports' => [
+            'driver' => 'local',
+            'root' => public_path('assets') . '/documents/reports',
+            'url' => '/documents/reports',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         'think-creative' => [
             'driver' => 'local',
             'root' => public_path('think'),

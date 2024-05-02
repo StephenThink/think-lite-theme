@@ -192,6 +192,16 @@ footer {
         }
     }
 
+#mixed-text {
+    @apply text-[#193269];
+    h2 {
+        @apply uppercase text-2xl mb-4
+        }
+    p {
+        @apply pb-1 leading-[22px] text-[15px]
+        }
+    }
+
 
 blockquote {
     @apply text-xl italic font-semibold lg:w-9/12 mx-auto
@@ -200,7 +210,7 @@ blockquote {
 /* Buttons */
 
 
-a[role="button"] {
+a[role="button"]{
     @apply sm:min-w-[50%] transition-transform rounded px-4 py-2 text-center text-lg font-bold uppercase shadow outline-none transition-colors duration-300 ease-in-out lg:min-w-[10rem] hover:shadow-inner focus:outline-none;
 
     &.button-primary {

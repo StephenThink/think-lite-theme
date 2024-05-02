@@ -1368,6 +1368,594 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+            mixed_information:
+              display: 'Mixed Information'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: information_layout
+                  field:
+                    options:
+                      text-content-left: 'Text on the Left, Image on the Right'
+                      text-content-right: 'Image on the Left, Text on the Right'
+                    inline: false
+                    cast_booleans: false
+                    default: text-content-left
+                    type: radio
+                    display: 'Information Layout'
+                    instructions: 'How would you like your information beginning displayed?'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: slide_background
+                  field:
+                    options:
+                      bg-transparent: None
+                      bg-white: White
+                      'bg-gray-500 border-gray-300': 'Mid Grey'
+                      bg-gray-600: 'Dark Grey'
+                      bg-black: Black
+                      bg-box-background-primary: 'Primary Theme'
+                      bg-box-background-secondary: 'Secondary Theme'
+                      bg-box-background-tertiary: 'Tertiary Theme'
+                      bg-slide-background: 'Slide Background'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: true
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Slide background colour'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: 'This is the colour of the current Box in the current block.'
+                    max_items: 1
+                    always_save: true
+                -
+                  handle: slide_speed
+                  field:
+                    default: '5000'
+                    type: integer
+                    display: 'Slide Speed'
+                    instructions: 'This is a value in milliseconds, on a mobile device this value is doubled.'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: items
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          items:
+                            display: Items
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: text_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - image
+                                    - table
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: 'Text Content'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: image
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: mixed_images
+                                  folder: /
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: Image
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Items
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+        interactive:
+          display: Interactive
+          instructions: null
+          icon: null
+          sets:
+            map:
+              display: Map
+              instructions: 'Do you have a map that you want to show different locations?'
+              icon: globe-world-wide-web
+              fields:
+                -
+                  handle: map_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: map_images
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Map Image'
+                    instructions: 'Please section a map of the area you want to display.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: locations
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          location:
+                            display: Location
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: location_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Location Title'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: location_image
+                                field:
+                                  max_files: 1
+                                  min_files: 1
+                                  mode: list
+                                  container: map_images
+                                  folder: locations
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: 'Location Image'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: location_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - color
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: 'Location Content'
+                                  instructions: 'Bit of information about the location.'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: coordinates
+                                field:
+                                  mode: keyed
+                                  keys:
+                                    top-x: 'x-coordinate of the top-left corner of the rectangle'
+                                    top-y: 'y-coordinate of the top-left corner of the rectangle'
+                                    bottom-x: 'x-coordinate of the bottom-right corner of the rectangle'
+                                    bottom-y: 'y-coordinate of the bottom-right corner of the rectangle'
+                                  type: array
+                                  display: Co-Ordinates
+                                  instructions: 'Where do the Co-Ordinates of the map appear?'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: pointer_location
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: map_images
+                                  folder: locations
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: 'Pointer Location'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Locations
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: background_colour
+                  field:
+                    options:
+                      bg-transparent: None
+                      bg-white: White
+                      'bg-gray-500 border-gray-300': 'Mid Grey'
+                      bg-gray-600: 'Dark Grey'
+                      bg-black: Black
+                      bg-box-background-primary: 'Primary Theme'
+                      bg-box-background-secondary: 'Secondary Theme'
+                      bg-box-background-tertiary: 'Tertiary Theme'
+                      bg-slide-background: 'Slide Background'
+                      'bg-[#193269]': 'Slide Background Blue'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Background Colour'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            globe:
+              display: Globe
+              instructions: 'Do you have a map that you want to show different locations?'
+              icon: globe-world-wide-web
+              fields:
+                -
+                  handle: globe_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: map_images
+                    folder: /
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Globe Image'
+                    instructions: 'Please section a map of the area you want to display.'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: globe_locations
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          globe_location:
+                            display: Location
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: location_title
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'Location Title'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: location_content
+                                field:
+                                  buttons:
+                                    - h2
+                                    - h3
+                                    - bold
+                                    - italic
+                                    - unorderedlist
+                                    - orderedlist
+                                    - removeformat
+                                    - quote
+                                    - anchor
+                                    - color
+                                  smart_typography: false
+                                  save_html: false
+                                  inline: false
+                                  toolbar_mode: fixed
+                                  reading_time: false
+                                  word_count: false
+                                  fullscreen: true
+                                  allow_source: true
+                                  enable_input_rules: true
+                                  enable_paste_rules: true
+                                  remove_empty_nodes: false
+                                  antlers: false
+                                  link_noopener: false
+                                  link_noreferrer: false
+                                  target_blank: false
+                                  always_show_set_button: false
+                                  collapse: false
+                                  previews: true
+                                  type: bard
+                                  display: 'Location Content'
+                                  instructions: 'Bit of information about the location.'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: whereabouts
+                                field:
+                                  options:
+                                    uk: UK
+                                    ire: Ireland
+                                    nor: Norway
+                                    ger: Germany
+                                    fra: France
+                                    swe: Sweden
+                                    aus: Australia
+                                    can: Canada
+                                    zea: 'New Zealand'
+                                    hk: 'Hong Kong'
+                                    chi: China
+                                    ind: India
+                                    uae: Uae
+                                    mal: Malaysia
+                                  inline: true
+                                  cast_booleans: false
+                                  default: uk
+                                  type: radio
+                                  display: Whereabouts
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: coordinates
+                                field:
+                                  mode: keyed
+                                  keys:
+                                    top-x: 'x-coordinate of the top-left corner of the rectangle'
+                                    top-y: 'y-coordinate of the top-left corner of the rectangle'
+                                    bottom-x: 'x-coordinate of the bottom-right corner of the rectangle'
+                                    bottom-y: 'y-coordinate of the bottom-right corner of the rectangle'
+                                  type: array
+                                  display: Co-Ordinates
+                                  instructions: 'Where do the Co-Ordinates of the map appear?'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: pointer_location
+                                field:
+                                  max_files: 1
+                                  mode: list
+                                  container: map_images
+                                  folder: locations
+                                  restrict: false
+                                  allow_uploads: true
+                                  show_filename: true
+                                  show_set_alt: true
+                                  type: assets
+                                  display: 'Pointer Location'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Locations
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: background_colour
+                  field:
+                    options:
+                      bg-transparent: None
+                      bg-white: White
+                      'bg-gray-500 border-gray-300': 'Mid Grey'
+                      bg-gray-600: 'Dark Grey'
+                      bg-black: Black
+                      bg-box-background-primary: 'Primary Theme'
+                      bg-box-background-secondary: 'Secondary Theme'
+                      bg-box-background-tertiary: 'Tertiary Theme'
+                      bg-slide-background: 'Slide Background'
+                      'bg-[#193269]': 'Slide Background Blue'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Background Colour'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+        reports:
+          display: Reports
+          instructions: null
+          icon: null
+          sets:
+            reports:
+              display: 'Reports By Year'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: which_collection
+                  field:
+                    mode: default
+                    type: collections
+                    display: 'Which Collection'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: filter_terms
+                  field:
+                    mode: default
+                    create: false
+                    taxonomies:
+                      - report_type
+                    type: terms
+                    display: 'Filter Terms'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            reports_by_term:
+              display: 'Reports by Term'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: which_collection
+                  field:
+                    mode: default
+                    type: collections
+                    display: 'Which Collection'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: filter_terms
+                  field:
+                    mode: default
+                    create: false
+                    taxonomies:
+                      - report_type
+                    type: terms
+                    display: 'Filter Terms'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
       always_show_set_button: false
       collapse: false
       previews: true

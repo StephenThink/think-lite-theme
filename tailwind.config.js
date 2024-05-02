@@ -114,6 +114,9 @@ module.exports = {
                 "third" : '33.33vw',
             },
             spacing: {
+                'button-mobile': '1.5rem',
+                'button-desktop': '1rem',
+                'button-max': '2.5rem',
                 // inner: '1rem',
                 // 'sm-inner': '2rem',
                 // 'md-inner': '3rem',
@@ -193,6 +196,10 @@ module.exports = {
                 "box-background-primary": "#FFFFFF",
                 "box-background-secondary": "#FFFFFF",
                 "box-background-tertiary": "#FFFFFF",
+                "button-active": "#a39365",
+                "button-inactive": "#c8e6fa",
+                "slide-background": "#fafafa",
+
 
             },
             flex: {
@@ -235,7 +242,7 @@ module.exports = {
     plugins: [
         require('@tailwindcss/typography'),
         require('tailwindcss-debug-screens'),
-        require('@markusantonwolf/ta-analytics')
+        // require('@markusantonwolf/ta-analytics')
     ],
 
 }

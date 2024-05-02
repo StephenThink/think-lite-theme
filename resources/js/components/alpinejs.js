@@ -7,13 +7,15 @@ import {
     brick_gallery,
     dropdown,
     flip_card,
-    full_card,
-    navBar,
+    full_card, globe_locations, map_locations,
+    navBar, report_term, report_yearly,
     slider,
     theme_changer,
 } from "./alpinejs/index.js";
 import "@markusantonwolf/ta-analytics/dist/ta-analytics.js"
 import {collapse} from "@alpinejs/collapse";
+import mixed_information from "./alpinejs/mixed_information.js";
+import report_year from "./alpinejs/report_yearly.js";
 
 
 // Define the 'alpinejs' function.
@@ -38,6 +40,11 @@ const alpinejs = () => {
         Alpine.data('slider', slider);
         Alpine.data('dropdown', dropdown)
         Alpine.data('navBar', navBar)
+        Alpine.data('mixed_information', mixed_information)
+        Alpine.data('map_locations', map_locations)
+        Alpine.data('globe_locations', globe_locations)
+        Alpine.data('report_yearly', report_yearly)
+        Alpine.data('report_term', report_term)
 
     });
 

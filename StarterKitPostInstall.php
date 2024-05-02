@@ -15,10 +15,7 @@ class StarterKitPostInstall
             } catch (ProcessFailedException $exception) {
                 $console->info($exception->getMessage());
             }
-
-
                 app('files')->append(base_path('.gitignore'), "\n/public/assets");
-
         }
 
         if ($console->confirm('Do you want to install npm dependencies?', true)) {
