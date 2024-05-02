@@ -1,0 +1,45 @@
+<div
+    class="mt-12 {{ background_colour }} w-full flex flex-row p-4"
+    x-data='map_locations({{ locations|to_json }})'
+>
+
+    <div class="w-1/2 flex flex-col gap-6">
+        {{ locations }}
+
+        <div class="w-full cursor-pointer"
+             @click="toggleLocation('{{ location_title }}')"
+        >
+
+        <div class="bg-[#a39365] text-white py-2 px-4 inline-flex items-center justify-between text-2xl w-full" >
+            {{ location_title }}
+            <span x-show="selectedLocation === '{{ location_title }}'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                </svg>
+            </span>
+             <span x-show="selectedLocation !== '{{ location_title }}'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </span>
+        </div>
+        <div x-show="selectedLocation === '{{ location_title }}'" class="bg-white"
+
+             x-collapse
+        >
+            <img src="{{ location_image }}" alt="">
+            <div class="p-2 prose]">{{ location_content }}</div>
+        </div>
+        </div>
+
+        {{ /locations }}
+
+    </div>
+    <div class="relative w-1/2 min-h-[1000px]">
+
+<img src="{{ map_image }}" alt="" class="object-right  absolute" width="{{ map_image.width }}" height="{{ map_image.height }}">
+    {{ locations }}
+    <img x-cloak x-show="selectedLocation === '{{ location_title }}'" src="{{pointer_location}}" alt="" class="absolute">
+    {{ /locations }}
+    </div>
+</div>

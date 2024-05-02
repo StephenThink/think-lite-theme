@@ -1,0 +1,65 @@
+<div
+    class="mt-12"
+    id="mixed_information"
+    x-data='mixed_information({{ items|to_json }}, {{slide_speed}})'
+    x-cloak
+    @mouseEnter="pauseAutoSlide"
+    @mouseLeave="playAutoSlide"
+    x-show="isLoaded"
+    @resize.window="getWidth()"
+>
+
+{{ items }}
+    <img src="{{ glide:image preset="mixed-image-webp" }}" data-image-id="{{ id }}" class="image__slide hidden"/>
+    {{ /items }}
+
+        <div class="flex flex-col-reverse {{ information_layout==='text-content-left' ? 'lg:flex-row' : 'lg:flex-row-reverse' }} {{slide_background}} ">
+            <div class="w-full lg:w-1/2" >
+                <div class="py-5 px-16 min-h-[300px] max-h-[350px] animated" id="mixed-text" x-html="activeSlide.text_content"></div>
+            </div>
+            <img :src="activeSlide.glideImage" :alt="activeSlide.image.alt" class="object-contain w-full lg:w-1/2 animated min-h-[300px] max-h-[350px] pt-3 lg:pt-0" >
+        </div>
+        <div class="flex items-center justify-between py-3 bg-[#FAFAFA]">
+            <div class="w-1/6 lg:hidden"></div>
+            <div class="justify-center items-center flex flex-1">
+                    <button class="stroke-button-active" @click="prevSlide()" aria-label="Previous Button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-button-max h-button-max stroke-button-active" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+
+                    <template x-for="(item, index) in items" :key="index">
+                        <button
+                            @click="jumpSlide(index)"
+                            :class="{ '!bg-button-active': slideIndex === index }"
+                            class="mx-3 lg:mx-1 w-button-mobile h-button-mobile lg:w-button-desktop lg:h-button-desktop rounded-full bg-button-inactive"
+                        ></button>
+                    </template>
+
+                    <button @click="nextSlide()" class="" aria-label="Next Button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-button-max h-button-max stroke-button-active">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            <div class="w-1/6 justify-end pr-6 items-center flex lg:hidden">
+                <button x-cloak x-show="isPaused" @click="playAutoSlide" class="text-button-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-button-max h-button-max">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+</svg>
+
+
+                </button>
+                <button x-cloak x-show="!isPaused" @click="pauseAutoSlide" class="text-button-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-button-max h-button-max">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+
+                </button>
+
+            </div>
+        </div>
+
+
+</div>
